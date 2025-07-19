@@ -1,0 +1,93 @@
+       * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #000;
+            color: #00ff00;
+            font-family: 'Courier New', monospace;
+            min-height: 100vh;
+        }
+
+        nav {
+            background: rgba(0, 255, 0, 0.1);
+            border-bottom: 1px solid #00ff00;
+            padding: 1rem;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        nav a {
+            color: #00ff00;
+            text-decoration: none;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+
+        nav a:hover {
+            opacity: 1;
+        }
+
+        .terminal-layout {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 1rem;
+            padding: 1rem;
+            height: calc(100vh - 4rem);
+        }
+
+        .signal-monitor {
+            border: 1px solid #00ff00;
+            padding: 1rem;
+            overflow-y: auto;
+        }
+
+        .signal-strength {
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+            border: 1px solid #00ff00;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+
+        .terminal-window {
+            border: 1px solid #00ff00;
+            padding: 1.5rem;
+            overflow-y: auto;
+        }
+
+        .command-line {
+            margin-bottom: 1rem;
+        }
+
+        .command-line::before {
+            content: ">";
+            margin-right: 0.5rem;
+            color: #00ff00;
+        }
+
+        .scanning {
+            animation: scan 1.5s infinite;
+        }
+
+        @keyframes scan {
+            0% { color: #00ff00; }
+            50% { color: #008800; }
+            100% { color: #00ff00; }
+        }
+
+        pre {
+            margin: 1rem 0;
+            font-family: 'Courier New', monospace;
+        }
