@@ -569,7 +569,7 @@
         }
 
         .military-crate::after {
-            content: "TACTICAL SUPPLY";
+            content: "Gray Hat";
             position: absolute;
             top: 5px;
             right: 10px;
